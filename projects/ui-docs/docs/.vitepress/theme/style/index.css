@@ -1,0 +1,18 @@
+.vp-doc table {
+  display: table;
+  margin: 0;
+}
+
+.vp-doc th,
+.vp-doc td {
+  border: 0 none;
+  font-size: 14px;
+}
+
+.vp-doc li + li {
+  margin-top: 0;
+}
+
+.anticon svg {
+  display: block;
+}

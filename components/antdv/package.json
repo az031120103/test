@@ -1,0 +1,57 @@
+{
+  "name": "@inesat/it-components",
+  "version": "1.0.0",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/esm/esm/inesat-it-components.js",
+  "main": "./dist/umd/umd/inesat-it-components.js",
+  "types": "./dist/inesatCliShareTypes/lib.d.ts",
+  "keywords": [
+    "vue3",
+    "antd",
+    "业务组件"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "dev": "inesatCli dev --env dev",
+    "build": "rimraf dist && inesatCli build --env prod"
+  },
+  "devDependencies": {
+    "@inesat/cli": "^1.0.7",
+    "@types/lodash": "^4.14.182",
+    "@types/file-saver": "^2.0.5",
+    "@vue/runtime-core": "^3.2.33",
+    "@vueuse/core": "^8.4.2",
+    "@wangeditor/editor": "^5.1.1",
+    "@wangeditor/editor-for-vue": "^5.1.11",
+    "@ant-design/icons-vue": "^6.1.0",
+    "ant-design-vue": "3.2.11",
+    "autoprefixer": "^10.4.7",
+    "cross-env": "^7.0.3",
+    "file-saver": "^2.0.5",
+    "lodash": "^4.17.21",
+    "vue": "^3.2.45",
+    "vue-types": "^4.1.1",
+    "vue-buffer": "0.0.1",
+    "vue-tsc": "^0.34.7",
+    "xlsx": "^0.18.5"
+  },
+  "dependencies": {
+    "@inesat/plugin-vue3": "^1.0.0",
+    "@types/node": "^17.0.31",
+    "postcss": "^8.4.13",
+    "postcss-html": "^1.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  },
+  "__npminstall_done": false,
+  "engines": {
+    "node": "^12 || >=14"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "ie >= 11"
+  ]
+}

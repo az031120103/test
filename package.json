@@ -1,0 +1,60 @@
+{
+  "root": true,
+  "name": "inesat-it-components-workspace",
+  "version": "1.0.0",
+  "workspaces": [
+    "components/*",
+    "projects/*"
+  ],
+  "description": "inesat-it-components workspace",
+  "private": true,
+  "license": "ISC",
+  "scripts": {
+    "clear": "lerna clean",
+    "dev": "lerna run --stream --sort dev",
+    "dev:ui": "lerna run --scope=@inesat/it-components --stream --sort dev",
+    "dev:docs": "lerna run --scope=@inesat/it-components-docs --stream --sort dev",
+    "build": "lerna run --stream --sort build",
+    "build:docs": "lerna run --scope=@inesat/it-components-docs --stream --sort build",
+    "test": "lerna run --stream --sort test",
+    "lint": "eslint . --ext js,ts,tsx --fix",
+    "lint-fix": "eslint . --ext js,ts,tsx --fix",
+    "lint:style": "stylelint --cache \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint:style-fix": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@inesat/commitlint-config": "^1.1.1",
+    "@inesat/eslint-config-vue3": "^1.1.4",
+    "@inesat/stylelint-config": "^1.1.2",
+    "lerna": "^3.22.0"
+  },
+  "dependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.1"
+  },
+  "__npminstall_done": false,
+  "engines": {
+    "node": "^12 || >=14"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "ie >= 11"
+  ],
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "npm run lint-fix",
+      "git add"
+    ],
+    "src/**/*.vue": [
+      "npm run lint-fix",
+      "npm run lint:style-fix",
+      "git add"
+    ],
+    "src/**/*.{css,scss}": [
+      "npm run lint:style-fix",
+      "git add"
+    ]
+  }
+}
